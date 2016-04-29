@@ -9,6 +9,7 @@
         Title="Marky" Height="500" Width="800">
     <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="Open_Executed" />
+        <CommandBinding Command="Refresh" Executed="Refresh_Executed" CanExecute="Refresh_CanExecute" />
         <CommandBinding Command="{x:Static local:MainWindow.Preferences}" Executed="Preferences_Executed" />
         <CommandBinding Command="{x:Static local:MainWindow.ExportHTML}" Executed="ExportHTML_Executed" CanExecute="ExportHTML_CanExecute" />
     </Window.CommandBindings>
@@ -26,6 +27,8 @@
             <MenuItem Header="_File">
                 <MenuItem Header="_Open"
                           Command="Open" />
+                <MenuItem Header="_Refresh"
+                          Command="Refresh" />
                 <MenuItem x:Name="ExportToHTML"
                           Command="{x:Static local:MainWindow.ExportHTML}"
                           IsEnabled="False"
